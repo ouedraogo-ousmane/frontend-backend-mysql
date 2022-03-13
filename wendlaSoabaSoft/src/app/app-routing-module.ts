@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { Router,RouterModule } from "@angular/router";
+import { AuthentificationComponent } from "./folderComponents/componentApplication/authentification/authentification.component";
 
 
 
@@ -7,7 +8,7 @@ import { Router,RouterModule } from "@angular/router";
 @NgModule({
 
     imports:[RouterModule.forRoot([
-
+      {path:'**',component: AuthentificationComponent}
     ])],
 
     exports:[RouterModule]
