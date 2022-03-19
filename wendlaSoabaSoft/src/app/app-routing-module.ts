@@ -23,7 +23,8 @@ import { AuthentifiationGuard } from "./folderGuards/guardApplicationComponent/a
 @NgModule({
 
     imports:[RouterModule.forRoot([
-      {path:'acceuil',component:PageDeGardeComponent},
+      {path:'acceuil-page',component:PageDeGardeComponent,
+      canActivate:[AuthentifiationGuard]},
       {path:'liste-exercices',component:ListeExercicesComponent},
       {path:'detail-exercices/:_id',component:DetailExercicesComponent},
       {path:'mission/:_id',component:ProgrammationComponent},
@@ -40,9 +41,7 @@ import { AuthentifiationGuard } from "./folderGuards/guardApplicationComponent/a
       {path:'detail-chauffeurs/:_id',component:DetailChauffeursComponent},
       {path:'trajets',component:GestionTrajetsComponent},
       {path:'statistiques',component:StatistiquesComponent},
-
-      {path:'',component: AuthentificationComponent,
-        canActivate:[AuthentifiationGuard]
+      {path:'',component:AuthentificationComponent
       },
 
       {path:'**',component:NotFoundPageComponent}

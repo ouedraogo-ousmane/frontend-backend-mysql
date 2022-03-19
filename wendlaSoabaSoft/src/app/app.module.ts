@@ -38,6 +38,8 @@ import { SuivieClientsComponent } from './folderComponents/componentGestRecette/
 import { SuivieProduitsComponent } from './folderComponents/componentGestRecette/suivie-produits/suivie-produits.component';
 import { NotFoundPageComponent } from './folderComponents/componentApplication/not-found-page/not-found-page.component';
 import { StatistiquesComponent } from './folderComponents/componentApplication/statistiques/statistiques.component';
+import { ClarityModule } from '@clr/angular';
+import { CdsModule } from '@cds/angular';
 
 
 
@@ -84,6 +86,8 @@ import { StatistiquesComponent } from './folderComponents/componentApplication/s
     HttpClientModule,
 
     RouterModule,
+     ClarityModule,
+     CdsModule,
 
   ],
 

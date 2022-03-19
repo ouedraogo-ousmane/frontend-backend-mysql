@@ -10,11 +10,16 @@ export class AuthentifiationGuard implements CanActivate {
   constructor(private auth:AuthentificationService, private router:Router){}
 
  canActivate():boolean{
+
+  if(this.auth.isLoggedIn)
+  {
     return true;
+  }else
+   {
+    alert("authentification requise!")
+     this.router.navigate(['']);
+     return this.auth.isLoggedIn;
+    };
   }
-
-
-
-
 
 }

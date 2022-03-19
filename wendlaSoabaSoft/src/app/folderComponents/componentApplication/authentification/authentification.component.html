@@ -1,0 +1,44 @@
+<div class="login-wrapper">
+
+  <form class="login" [formGroup]="userData">
+
+      <section class="title">
+          <h3 class="welcome">Bienvenu à </h3>
+          Wendla Soaba Transport
+          <h5 class="hint">Vos informations sont strictement personnelles !</h5>
+      </section>
+
+      <div class="login-group">
+
+          <div class="auth-source select">
+          <input  type="role" id="role"  formControlName="role">
+           <u>mot Secret de la semaine</u>
+
+          </div>
+          <input class="username" type="text" id="login_username" placeholder="Username" formControlName="name">
+
+          <input class="password" type="password" id="login_password" placeholder="Password" formControlName="password">
+
+          <div class="checkbox-check">
+
+              <input type="checkbox" id="rememberme" formControlName="cookieSet">
+
+              <label for="rememberme">
+                  les cookies seront activées
+              </label>
+          </div>
+
+          <div class="error active" *ngIf="!isValidData">
+             informations incorrectes
+          </div>
+          <button *ngIf="!isValidData" class="btn btn-primary">Contacter votre administrateur</button>
+
+          <div class="error active" *ngIf="isValidData">
+            informations valid!
+         </div>
+         <button *ngIf="isValidData" type="submit" class="btn btn-primary" (click)="setlogged()">Envoyer</button>
+
+      </div>
+  </form>
+
+</div>
