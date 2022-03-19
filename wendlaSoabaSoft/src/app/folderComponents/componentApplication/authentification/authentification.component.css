@@ -1,0 +1,27 @@
+
+
+.checkbox-check{
+  display:flex;
+  justify-content:flex-start;
+  padding:10px;
+
+}
+
+input[type="checkbox"]{
+  width: 20px;
+  height: 20px;
+
+}
+input[type="role"]{
+ margin-right: 10px;
+
+}
+
+.checkbox-check label{
+  margin-left: 10px;
+}
+
+.login-wrapper .login{
+  width:50%;
+}
+
