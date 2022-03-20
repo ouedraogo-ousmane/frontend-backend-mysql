@@ -1,4 +1,4 @@
-export interface Trajet {
+ interface Trajet {
   id_trajet            :number,
   id_infostrajet       :number,
   id_pays              :number,
@@ -7,5 +7,17 @@ export interface Trajet {
   vil_id_ville         :number,
   distance             :number,
   type_trajet          :string
+
+}
+
+export class Trajets implements Trajet{
+  id_trajet!: number;
+  id_infostrajet!: number;
+  id_pays!: number;
+  id_ville!: number;
+  vil_id_pays!: number;
+  vil_id_ville!: number;
+  distance!: number;
+  type_trajet!: string;
 
 }
