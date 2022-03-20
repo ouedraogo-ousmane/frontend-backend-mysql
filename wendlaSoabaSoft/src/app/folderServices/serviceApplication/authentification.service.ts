@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { LoginData } from 'src/app/folderModels/modelGestEntreprise/login-data';
+import { LoginDatas } from 'src/app/folderModels/modelGestEntreprise/login-data';
 
 interface User{
   password:string,
@@ -32,9 +32,9 @@ export class AuthentificationService {
    }
 
 
-   getUserData():Observable<LoginData>{
+   getUserData():Observable<LoginDatas>{
     //user data retreiving
-    return this.http.get<LoginData>(this.baseUrl);
+    return this.http.get<LoginDatas>(this.baseUrl);
    }
 
 
